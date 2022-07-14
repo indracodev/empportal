@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Login - Indraco Emp Portal</title>
+  <link rel="icon" type="image/x-icon" href="../asset/favicon.png">
+  <link rel="stylesheet" href="../portal.css">
+  <link rel="stylesheet" href="login.css">
+  <link rel="stylesheet" href="../asset/bootstrap-icons.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, viewport-fit=cover">
+  <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+  <meta content="utf-8" http-equiv="encoding">
+</head>
+
+<body>
+  <div class="liquid translateY">
+    <div class="liquid_circle1">
+    </div>
+    <div class="liquid_circle2">
+    </div>
+  </div>
+  <div class="loadscreen" id="loadscreen" style="opacity:1; visibility:visible;">
+    <div class="loadscreen_core" id="loadscreencore" style="transform:translateY(-50px);">
+      <div class="loadscreen_logo">
+        <img src="../asset/favicon.png"></img>
+      </div>
+      <div class="loadscreen_spiner">
+        <i class="bi bi-gear-fill loadscreen_spin" style="font-size:3rem"></i>
+        <i class="bi bi-gear-fill loadscreen_spin" style="font-size:2rem; animation: rotationObjInv 1.5s infinite linear; margin-left: -6px;"></i>
+      </div>
+    </div>
+  </div>
+  <div class="message" id="message" style="opacity:0; visibility:hidden;">
+    <div class="message_core" id="messagecore" style="transform:translateY(-50px)">
+      <div class="message_core_logo" id="messagelogo">
+        <i class="bi bi-exclamation-triangle-fill"></i>
+      </div>
+      <div class="message_core_text" id="messagemsg">
+        An error has found!
+      </div>
+      <div class="message_core_button" id="messagebtn">
+        <button onclick='closeMsg()'><i class="bi bi-x-lg"></i> Close</button>
+      </div>
+    </div>
+  </div>
+  <div class="loginform" id="loginform" style="opacity:0; visibility:hidden; transform:translateY(-50px);">
+    <div class="loginform_logo">
+      <img src="../asset/logo.png"></img>
+    </div>
+    <div class="loginform_input">
+      <div class="loginform_input_judul">
+        Username
+      </div>
+      <div class="loginform_input_core">
+        <input id="loginusername"></input>
+      </div>
+    </div>
+    <div class="loginform_input">
+      <div class="loginform_input_judul">
+        Password
+      </div>
+      <div class="loginform_input_core">
+        <input type="password" id="loginpassword"></input>
+      </div>
+    </div>
+    <div class="loginform_submit">
+      <button onclick="submitLogin()">Login</button>
+    </div>
+  </div>
+</body>
+
+<script type="text/javascript" src="../asset/jquery.min.js"></script>
+<script type="text/javascript" src="../asset/bootstrap.min.js"></script>
+<script type="text/javascript" src="../headlog.js"></script>
+<script type="text/javascript" src="login.js"></script>
+
+</html>

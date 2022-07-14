@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Dashboard - Indraco Emp Portal</title>
+  <link rel="icon" type="image/x-icon" href="../asset/favicon.png">
+  <link rel="stylesheet" href="../portal.css">
+  <link rel="stylesheet" href="dashboard.css">
+  <link rel="stylesheet" href="../asset/bootstrap-icons.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, viewport-fit=cover">
+  <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+  <meta content="utf-8" http-equiv="encoding">
+</head>
+
+<body>
+  <div class="liquid translateY">
+    <div class="liquid_circle1">
+    </div>
+    <div class="liquid_circle2">
+    </div>
+  </div>
+  <div class="loadscreen" id="loadscreen" style="opacity:1; visibility:visible;">
+    <div class="loadscreen_core" id="loadscreencore" style="transform:translateY(-50px);">
+      <div class="loadscreen_logo">
+        <img src="../asset/favicon.png"></img>
+      </div>
+      <div class="loadscreen_spiner">
+        <i class="bi bi-gear-fill loadscreen_spin" style="font-size:3rem"></i>
+        <i class="bi bi-gear-fill loadscreen_spin" style="font-size:2rem; animation: rotationObjInv 1.5s infinite linear; margin-left: -6px;"></i>
+      </div>
+    </div>
+  </div>
+  <div class="message" id="message" style="opacity:0; visibility:hidden;">
+    <div class="message_core" id="messagecore" style="transform:translateY(-50px)">
+      <div class="message_core_logo" id="messagelogo">
+        <i class="bi bi-exclamation-triangle-fill"></i>
+      </div>
+      <div class="message_core_text" id="messagemsg">
+        An error has found!
+      </div>
+      <div class="message_core_button" id="messagebtn">
+        <button onclick='closeMsg()'><i class="bi bi-x-lg"></i> Close</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="navbar_popuser" id="popuser" style="opacity:0; visibility:hidden; transform:translateX(50px)">
+    <div class="navbar_popuser_pp" id="popuserpp" style='background-image: url("../asset/userdefault.png")'>
+    </div>
+    <div class="navbar_popuser_username" id="popuserusername">
+      Username
+    </div>
+    <div class="navbar_popuser_role" id="popuserrole">
+      Role
+    </div>
+    <button onclick='gotoSetting()' class="navbar_popuser_btn" style="margin-top:20px;">
+      <i class="bi bi-gear-fill"></i> Setting
+    </button>
+    <button onclick='showLogout()' class="navbar_popuser_btn" style="margin-bottom:20px;">
+      <i class="bi bi-power"></i> Logout
+    </button>
+  </div>
+
+  <div class="navbar_menu" id="popmenu" style="opacity:0; visibility:hidden;">
+    <div class="navbar_menu_core" id="popmenucore" style="transform:translateY(-80px); bottom: 300px; right: 100px; border-radius:10px 10px 500px 100px;">
+      <div class="navbar_menu_core_title" id="popmenucoretitle" style="transform:translateY(-80px);">
+        <i class="bi bi-columns-gap"></i> Application
+      </div>
+      <div class="navbar_menu_core_list" id="popmenucorelist" style="opacity:0;">
+        <div class="loadingobj" style="color:white; font-size:50px; margin-top:30px;">
+          <i class="bi bi-app-indicator"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="navbar" id="navbar" style="transform:translateY(-60px)">
+    <div onclick="menuPop()" class="navbar_menubtn" id="navbarmenu">
+      <i class="bi bi-columns-gap"></i>
+    </div>
+    <div class="navbar_module" id="navbarmoduletitle">
+      <div class="loadingobj">
+        <i class="bi bi-app-indicator"></i>
+      </div>
+    </div>
+    <div onclick='userPop()' id="navbaruser" class="navbaruser" style='background-image: url("../asset/userdefault.png")'>
+    </div>
+  </div>
+
+  <div class="logout" id="logout" style="opacity:0; visibility:hidden;">
+    <div class="logout_core" id="logoutcore" style='transform:translateY(-50px)'>
+      <div class="logout_core_logo">
+        <i class="bi bi-power"></i>
+      </div>
+      <div class="logout_core_message">
+        Are you sure<br>you want to logout?
+      </div>
+      <div class="logout_core_btn">
+        <button onclick='closeLogout()'><i class="bi bi-x-lg"></i> Cancel</button>
+        <button onclick='doLogout()' style="background-color:darkred;"><i class="bi bi-power"></i> Logout</button>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+<script type="text/javascript" src="../asset/jquery.min.js"></script>
+<script type="text/javascript" src="../asset/bootstrap.min.js"></script>
+<script type="text/javascript" src="../head.js"></script>
+<script type="text/javascript" src="dashboard.js"></script>
+
+</html>

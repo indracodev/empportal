@@ -1,0 +1,107 @@
+.loginform{
+  position: fixed;
+  width: 400px;
+  min-height: 200px;
+  top: calc(50% - 200px);
+  bottom:auto;
+  left:calc(50% - 200px);
+  right:calc(50% - 200px);
+  background-color: rgba(255,255,255,.7);
+  border-radius: 20px;
+  box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  transition: all 0.5s;
+}
+.loginform:hover{
+  background-color: rgba(255,255,255,.9);
+}
+
+@media (orientation: portrait) {
+  .loginform{
+    width: 80%;
+    left:10%;
+    right:10%;
+  }
+}
+
+.loginform_logo{
+  float:left;
+  width:100%;
+  height:auto;
+  text-align: center;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+.loginform_logo img{
+  display:inline-block;
+  max-width: 50%;
+  max-height: 100px;
+}
+.loginform_input{
+  float:left;
+  width:100%;
+  height:auto;
+  text-align: center;
+}
+.loginform_input_judul{
+  float:left;
+  width:100%;
+  height:auto;
+  text-align: center;
+  font-family: montBold;
+  font-size: 12px;
+  margin-top: 12px;
+  margin-bottom: 0.2rem;
+}
+.loginform_input_core{
+  float:left;
+  width:100%;
+  height:auto;
+  text-align: center;
+}
+.loginform_input_core input{
+  display: inline-block;
+  width:50%;
+  height:auto;
+  border-top: solid 0px #112B3C;
+  border-left: solid 0px #112B3C;
+  border-right: solid 0px #112B3C;
+  border-bottom: solid 1px #112B3C;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  background-color: rgba(0,0,0,0);
+  font-family: montReg;
+  font-size: 12px;
+  text-align: center;
+  outline: none;
+}
+.loginform_submit{
+  float:left;
+  width:100%;
+  height:auto;
+  text-align: center;
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+}
+
+.loginform_submit button{
+  display:inline-block;
+  width:calc(50% + 40px);
+  height:auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: white;
+  font-size: 12px;
+  font-family: montBold;
+  background-color: #FF8D29;
+  border:solid 0px white;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+.loginform_submit button:hover{
+  background-color: #251D3A;
+}
